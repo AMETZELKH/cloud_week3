@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Week 3</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Part 1 Answers of questions</h1>
+<header><h1>Part 1 Answers of questions</h1></header>
 
+<main class="container">
+
+<section>
 <h2>1. Describe reasons why so many (most?) companies are using cloud based email and calendar services.</h2>
 <p>
     In basic, many companies use cloud-based email and calendar services because running these systems 
@@ -32,8 +37,9 @@
     archived in the cloud, eliminating the risk of loss due to changes in devices or environments, and can also serve as 
     evidence when necessary.
 </p>
+</section>
 
-
+<section>
 <h2>2. What would a mid-size company store to the Amazon Glacier? What not? Why? What other large cloud backup or mass storage providers are there?</h2>
 <p>
     Amazon Glacier is intended for data that needs to be retained for a long time but is accessed relatively infrequently. 
@@ -52,8 +58,9 @@
     and Google Cloud Storage. They offer similar concepts for storing large amounts of data, although their pricing models, 
     integrations and archival options differ.
 </p>
+</section>
 
-
+<section>
 <h2>3. Select and describe 2-3 well-known Amazon S3 data leak incidents. What went wrong? List some automated S3 bucket search engines and attack tools.</h2>
 <p>
     Several well-known data exposure incidents involving Amazon S3 were caused not by a failure of Amazon's underlying storage 
@@ -79,7 +86,9 @@
     services that security researchers use to identify exposed cloud storage. Examples include S3Scanner, cloud_enum and Bucket 
     Finder. These tools can be useful for authorized security testing, but using them could be illegal.
 </p>
+</section>
 
+<section>
 <h2>4. List and explain some pros and cons of public DNS resolvers vs common home networking, where end users are using ISP's DNS resolvers</h2>
 <p>
     Public DNS resolvers such as Google's 8.8.8.8 and Cloudflare's 1.1.1.1 give users an alternative to the DNS resolver 
@@ -102,20 +111,25 @@
     on their location and network topology. As a result, changing DNS resolver can occasionally affect which CDN endpoint a 
     user reaches and therefore influence performance.
 </p>
+</section>
 
-<h1>Part 2 CSC Allas/Rahti exercise</h1>
+<header><h1>Part 2 CSC Allas/Rahti exercise</h1></header>
 
-<p>After prepared my html and Dockerfile, I pushed them into a github repository and created a Rahti project.</p>
-<p><img src="https://a3s.fi/cloud-week3/week3-git.png" width="600"/></p>
-<p><img src="https://a3s.fi/cloud-week3/week3-rahti.png" width="600"/></p>
+<section>
+<div>After prepared my html and Dockerfile, I pushed them into a github repository and created a Rahti project.</div>
+<p><img src="https://a3s.fi/cloud-week3/week3-git.png"/></p>
+<p><img src="https://a3s.fi/cloud-week3/week3-rahti.png"/></p>
 
-<p>Then I create an Allas project, change the public access status and upload the screenshots here.</p>
-<p><img src="https://a3s.fi/cloud-week3/week3-allas.png" width="600"/></p>
-<p><img src="https://a3s.fi/cloud-week3/week3-cuts.png" width="600"/></p>
+<div>Then I create an Allas project, change the public access status and upload the screenshots here.</div>
+<p><img src="https://a3s.fi/cloud-week3/week3-allas.png"/></p>
+<p><img src="https://a3s.fi/cloud-week3/week3-cuts.png"/></p>
 
+<div>Then I add these screenshots to my html, use oc to build and deploy Rahti project. The final page is here as you can see.</div>
+<p><img src="https://a3s.fi/cloud-week3/week3-deploy.png"/></p>
 
+</section>
 
-
+<section>
 <h2>References</h2>
 
 <ul>
@@ -160,6 +174,9 @@
     </a>
 </li>
 </ul>
+</section>
+
+</main>
 
 </body>
 </html>
