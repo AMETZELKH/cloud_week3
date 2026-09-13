@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Week 3</title>
+</head>
+
+<body>
+
+<h1>Part 1 Answers of questions</h1>
+
+<h2>1. Describe reasons why so many (most?) companies are using cloud based email and calendar services.</h2>
+<p>
+    In basic, many companies use cloud-based email and calendar services because running these systems 
+    themselves requires considerable infrastructure and administration. If a company operates its own email server, 
+    it needs to maintain servers, storage, backups, spam filtering, security updates, network connectivity, high 
+    availability and so on. These tasks can require significant time and expertise even though email itself is not 
+    the company's main business, so for a lot of companies is not efficient to do that.
+</p>
+<p>
+    Instead, cloud-based services such as Microsoft 365 and Google Workspace move much of this infrastructure to the 
+    service provider. The company can use email, calendars and another servieces provided without having to purchase and maintain 
+    its own mail servers. The provider also operates the underlying infrastructure and normally provides features such as 
+    spam protection, backups, multi-device access and collaboration tools. That makes employees working from home can access 
+    their schedule through a web browser or mobile application without connecting directly to the company's internal 
+    mail server, and also has many other advantages.
+</p>
+<p>
+    Collaboration can be another reason to choose cloud services like email and calendar. A cloud calendar allows employees 
+    to see each other's availability and arrange meetings, while shared calendars can be used for teams, meeting rooms or 
+    company events. This becomes particularly useful when employees work in different offices or countries. Emails can be 
+    archived in the cloud, eliminating the risk of loss due to changes in devices or environments, and can also serve as 
+    evidence when necessary.
+</p>
+
+
+<h2>2. What would a mid-size company store to the Amazon Glacier? What not? Why? What other large cloud backup or mass storage providers are there?</h2>
+<p>
+    Amazon Glacier is intended for data that needs to be retained for a long time but is accessed relatively infrequently. 
+    A mid-sized company could use archival storage for old backups, historical financial records, old project files, legal 
+    documents or other data that the company must keep but does not need to access every day. Taking this as an example, a company 
+    that produces engineering projects may have several terabytes of project data from the previous many years. Most of these files have 
+    no need for future, but some may need to be retained because of legal requirements or other possible request from customers. 
+    Keeping all of this information on expensive, high-performance storage would not be efficient. For that need, an archival 
+    storage class can therefore be suitable for them because the priority is long-term retention rather than immediate access. 
+</p>
+<p>
+    And in that way, what would not be stored to it something that still have need to access daily, like an active database, 
+    a frequently used website, or files that people need to open several times every day. These applications need relatively 
+    fast and predictable access. Retrieving archived data can take longer and may also create additional retrieval costs, 
+    depending on the storage class and access pattern. Other large cloud storage providers include Microsoft Azure Blob Storage 
+    and Google Cloud Storage. They offer similar concepts for storing large amounts of data, although their pricing models, 
+    integrations and archival options differ.
+</p>
+
+
+<h2>3. Select and describe 2-3 well-known Amazon S3 data leak incidents. What went wrong? List some automated S3 bucket search engines and attack tools.</h2>
+<p>
+    Several well-known data exposure incidents involving Amazon S3 were caused not by a failure of Amazon's underlying storage 
+    infrastructure, but by incorrect configuration or access control on the customer side. One well-known example involved 
+    Capital One in 2019. The incident resulted in the exposure of information relating to more than 100 million customers. 
+    The attacker was able to access data stored in an S3 bucket after exploiting a vulnerability in a web application 
+    firewall configuration. This case is interesting because it was not simply a matter of someone accidentally clicking 
+    "make bucket public". It involved a combination of a cloud configuration problem and exploitation of a vulnerability 
+    that allowed unauthorized access to cloud resources.
+</p>
+<p>
+    Another example was Verizon in 2017, where customer information was exposed through an incorrectly configured Amazon S3 
+    bucket. The data reportedly included information such as customer names, phone numbers and account-related information. 
+    The important experience from this type of incident is that cloud storage permissions must be treated as part of the 
+    organization's security boundary. If sensitive information is placed in a storage bucket with overly broad permissions, 
+    the data can potentially become accessible to unauthorized users.
+</p>
+<p>
+    These incidents show why the "shared responsibility" concept is important. AWS is responsible for protecting the underlying 
+    cloud infrastructure, but customers are responsible for configuring their own resources and controlling access to their 
+    data. Security therefore requires more than choosing a reputable cloud provider. Organizations should use least-privilege 
+    permissions, continuous configuration monitoring, logging and appropriate access controls. There are also tools and search 
+    services that security researchers use to identify exposed cloud storage. Examples include S3Scanner, cloud_enum and Bucket 
+    Finder. These tools can be useful for authorized security testing, but using them could be illegal.
+</p>
+
+<h2>4. List and explain some pros and cons of public DNS resolvers vs common home networking, where end users are using ISP's DNS resolvers</h2>
+<p>
+    Public DNS resolvers such as Google's 8.8.8.8 and Cloudflare's 1.1.1.1 give users an alternative to the DNS resolver 
+    provided by their Internet Service Provider. DNS is responsible for translating domain names into IP addresses, so the resolver is an important part of normal Internet access. 
+    One advantage of a large public resolver is that it is operated as a large-scale service with infrastructure distributed 
+    across many locations. This can provide good availability and performance. If a ISP's DNS server has a 
+    temporary problem, a user who has configured a public resolver may still be able to resolve domain names. Public DNS 
+    providers also often provide additional security features, such as blocking known malicious domains in some of their 
+    resolver products.
+</p>
+<p>
+    But also, using a public resolver does not mean that DNS will always be faster. DNS performance depends on the 
+    user's network, geographic location, caching and routing. An ISP's DNS resolver may actually be faster for a particular 
+    customer because it is located close to the customer. Privacy is another important consideration. When a user sends DNS 
+    queries to Google or Cloudflare, those companies become involved in handling the user's DNS requests. When the user 
+    instead uses the ISP's resolver, the ISP can see those DNS queries. Therefore, switching to a public resolver does not 
+    make DNS information disappear, it changes which organization operates the resolver and which organization the user has to trust. 
+    There can also be technical differences involving content delivery networks. Large websites often use DNS to direct users 
+    toward an appropriate server or CDN location,and different DNS resolvers can sometimes provide different answers depending 
+    on their location and network topology. As a result, changing DNS resolver can occasionally affect which CDN endpoint a 
+    user reaches and therefore influence performance.
+</p>
+
+<h1>Part 2 CSC Allas/Rahti exercise</h1>
+
+<p>After prepared my html and Dockerfile, I pushed them into a github repository and created a Rahti project.</p>
+
+<p>Then I create an Allas project and upload the screenshots in here.</p>
+
+
+
+
+<h2>References</h2>
+
+<ul>
+<li>
+    <a href="https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide">
+        Microsoft-365 Documentation
+    </a>
+</li>
+<li>
+    <a href="https://support.google.com/a/users/?hl=en#topic=9247638">
+        Google workspace information
+    </a>
+</li>
+<li>
+    <a href="https://aws.amazon.com/s3/storage-classes/glacier/">
+        Amazon S3 Glacier storage classes
+    </a>
+</li>
+<li>
+    <a href="https://azure.microsoft.com/en-gb/products/storage/blobs/?ef_id=_k_EAIaIQobChMI7Ja3393rlgMVOlORBR1qMBuWEAAYAiAAEgJYw_D_BwE_k_&OCID=AIDcmms8ofo0nj_SEM__k_EAIaIQobChMI7Ja3393rlgMVOlORBR1qMBuWEAAYAiAAEgJYw_D_BwE_k_&gad_source=1&gad_campaignid=23499876861&gbraid=0AAAAADcJh_uca2ERQZRBasNYK6UKnCYBW&gclid=EAIaIQobChMI7Ja3393rlgMVOlORBR1qMBuWEAAYAiAAEgJYw_D_BwE">
+        Azure Blob Storage
+    </a>
+</li>
+<li>
+    <a href="https://www.blackfog.com/aws-data-breach/" target="_blank">
+        AWS Data Breach: Lesson From 4 High Profile Breaches
+    </a>
+</li>
+<li>
+    <a href="https://businessinsights.bitdefender.com/worst-amazon-breaches" target="_blank">
+        Leaky Buckets: 10 Worst Amazon S3 Breaches
+    </a>
+</li>
+<li>
+    <a href="https://developers.google.com/speed/public-dns/docs/intro" target="_blank">
+        Google Publice DNS introduction
+    </a>
+</li>
+<li>
+    <a href="https://developers.cloudflare.com/1.1.1.1/" target="_blank">
+        1.1.1.1 (DNS Resolver)
+    </a>
+</li>
+</ul>
+
+</body>
+</html>
